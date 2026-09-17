@@ -1,0 +1,39 @@
+.feedback-panel {
+  overflow-wrap: anywhere;
+  margin-top: var(--space-6);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.feedback-panel h3 {
+  margin: 0;
+  font-size: var(--font-size-subheading);
+}
+
+.feedback-panel p {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.feedback-panel button {
+  min-height: 2.75rem;
+  margin-top: var(--space-5);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-small);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 650;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing);
+}
+
+.feedback-panel button:not(:disabled):hover,
+.feedback-panel button:not(:disabled):focus-visible {
+  background: var(--color-surface);
+}
+
+.feedback-panel button:disabled {
+  opacity: 0.6;
+}

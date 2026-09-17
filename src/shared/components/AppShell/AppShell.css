@@ -1,0 +1,92 @@
+.app-shell {
+  min-height: 100svh;
+}
+
+.app-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  padding-block: var(--space-5);
+}
+
+.app-brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  gap: var(--space-3);
+  color: var(--color-text);
+  font-size: var(--font-size-brand);
+  font-weight: 750;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+}
+
+.app-brand__mark {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-small);
+  background: linear-gradient(135deg, var(--color-accent) 50%, var(--color-accent-bright) 50%);
+  transform: rotate(-8deg);
+}
+
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-small);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    color var(--motion-duration-fast) var(--motion-easing),
+    background-color var(--motion-duration-fast) var(--motion-easing);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.primary-nav a[aria-current='page'] {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+.app-main {
+  padding-block: clamp(var(--space-8), 7vw, var(--space-16));
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 1;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-small);
+  background: var(--color-text);
+  color: var(--color-surface);
+  transform: translateY(calc(-100% - var(--space-6)));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
